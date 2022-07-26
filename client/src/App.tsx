@@ -55,13 +55,13 @@ export default class App extends Component<AppProps, AppState> {
 
   generateMenu() {
     return (
-      <Menun>
-        <Menun.Item name="home">
+      <Menu>
+        <Menu.Item name="home">
           <Link to="/">Home</Link>
-        </Menun.Item>
+        </Menu.Item>
 
-        <Menun.Menun position="right">{this.logInLogOutButton()}</Menum.Menun>
-      </Menun>
+        <Menu.Menu position="right">{this.logInLogOutButton()}</Menu.Menu>
+      </Menu>
     )
   }
 
