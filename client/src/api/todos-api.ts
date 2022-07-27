@@ -13,8 +13,8 @@ export async function getTodos(idToken: string): Promise<Todo[]> {
       'Authorization': `Bearer ${idToken}`
     },
   })
-  console.log('Todos:', response.data)
-  return response.data.items
+  console.log('Todos:', response.data.todos.Items)
+  return response.data.todos.Items
 }
 
 export async function createTodo(
@@ -27,7 +27,7 @@ export async function createTodo(
       'Authorization': `Bearer ${idToken}`
     }
   })
-  return response.data.item
+  return response.data.newItem
 }
 
 export async function patchTodo(
